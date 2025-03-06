@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            body{
+                padding: 0%;
+                margin: 0%;
+                box-sizing: border-box;
+            }
+            .header{
+                display: flex;
+                justify-content: space-between;
+            }
+            .profile{
+                flex:2;
+                width: 40px;
+                height:40px;
+                margin-top:20px;
+                margin-left:40px;
+                display: flex;
+                gap: 10px;
+               }
+            .img1{ 
+                width: 40px;
+                height:40px;
+                border-radius: 50% ;
+                border: 1px solid blueviolet;
+                object-fit: cover;
+            }
+            .name{
+                display: flex;
+                height: auto;
+                align-items:center;
+                font-weight: 700;
+            }
+            .main{
+                flex: 2;
+                display: flex;
+                gap: 20px;
+                height: 20vh;
+                align-items: center;
+                justify-content:space-around;
+               }
+            .main a{
+                text-decoration: none;
+                color: black;
+                font-size: small;
+                font-weight: 700;
+            }
+            a:hover{
+                color: #5582d3;
+            }
+            .h2{
+                display:flex;
+                background-color: #5582d3;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%231f1233' fill-opacity='0.14'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+            .logo{ 
+                margin-top: 90px;
+                border: 2px solid white;
+                height: 50vh;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo a{
+                border: 2px solid white;
+                padding: 10px;
+                text-decoration: none;
+            }
+            a:hover{
+                background-color: white;
+            }
+            .main_text{
+                flex: 99;
+                margin: 0% 10% ;
+                color: white;
+                text-align: center;
+                font-size: 15px;
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .main_tex h1{
+                margin-bottom: 0%;
+            }
+            .main_tex a{
+                background-color: white;
+                
+            }
+            .about{
+                padding-top: 70px;
+                background-color:rgba(153, 153, 153, 0.2);
+
+            }
+            .about_me{
+               
+                text-align: center;
+                border: 1px solid gary;
+            }
+            .blue-line{  
+                        content: '';
+                        position: relative;
+                        top: calc(100% + 1.5rem);
+                        height: 5px;
+                        width: 1rem;
+                        background: #0062b9;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-radius: 5px;
+            }
+            .des{
+                text-align: center;
+                margin: 10px 90px;
+                font-weight: 500;
+                color: #777;
+            }
+            .info{
+                display: flex;
+
+            }
+            .knowme{
+                flex: 1;
+                margin: 40px;
+               
+            }
+            .knowme p{
+                color: #777;
+                text-align: left;
+            }
+            .contact{}
+            .contact i{
+                text-decoration: none;
+                font-stretch: wider;
+                font-size: small;
+                font-weight: bold;
+                color: white;
+                border-radius: 5%;
+                padding: 10px 20px;
+                background-color: #0062b9;
+            }
+            i:hover{
+                text-decoration: underline;
+            }
+            .skills{
+                flex: 1;
+                margin: 40px;
+            }
+            h3:hover{
+                text-decoration:underline;
+            }
+            .skills h3{
+                text-align: center;
+            }
+            .skill_set{
+                    display: inline-block;
+                    margin: 10px;
+                    color: #777;
+                    border-radius:10% ;
+                    padding: 8px;
+                    background-color:rgba(153, 153, 153, 0.2);
+            }
+            .skill_set:hover{
+                color: black;
+            }
+                
+            .projects{
+                padding-top: 70px;
+               
+
+            }
+            .projects h3{
+               
+                text-align: center;
+                border: 1px solid gary;
+            }
+            .blue-line{  
+                        content: '';
+                        position: relative;
+                        top: calc(100% + 1.5rem);
+                        height: 5px;
+                        width: 2rem;
+                        background: #0062b9;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-radius: 5px;
+            }
+            .projects p{
+                text-align: center;
+                margin: 10px 90px;
+                font-weight: 500;
+                color: #777;
+            }
+            img{ 
+                width: 350px;
+                height:250px;
+            }
+            .project-1{
+                display:flex;
+                margin: 0px 40px;
+            }
+            .image_1{
+                flex: 1;
+                display: flex;
+
+            }
+            .para_1{
+                flex: 1;
+                text-align: center;
+            }
+            .para_1 p{
+                padding: 10px;
+                margin: 30px;
+            }
+            .para_1 a{
+                text-decoration: none;
+                background-color:#0062b9;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .project-2{
+                display:flex;
+                margin: 0px 40px;
+            }
+            .image_2{
+                flex: 1;
+                display: flex;
+
+            }
+            .para_2{
+                flex: 1;
+                text-align: center;
+            }
+            .para_2 p{
+                padding: 10px;
+                margin: 30px;
+            }
+            .para_2 a{
+                text-decoration: none;
+                background-color:#0062b9;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .project-3{
+                display:flex;
+                margin: 0px 40px;
+            }
+            .image_3{
+                flex: 1;
+                display: flex;
+
+            }
+            .para_3{
+                flex: 1;
+                text-align: center;
+            }
+            .para_3 p{
+                padding: 10px;
+                margin: 30px;
+            }
+            .para_3 a{
+           
+                text-decoration: none;
+                background-color:#0062b9;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .con{
+                text-align: center;
+                width: 100vw;
+                height: 150vh;
+                background-color: #5582d3;
+            }
+            .con-h{
+                padding-top: 50px;
+                font-weight: bold;
+                color: white;
+                font-stretch: extra-expanded;
+            }
+            .white-line{  
+                        content: '';
+                        position: relative;
+                        top: calc(100% + 1.5rem);
+                        height: 3px;
+                        width: 2rem;
+                        background: white;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-radius: 5px;
+            }
+            .con p{
+                color:white;
+                margin: 15px 50px;
+                font-size: small;
+                font-weight: 500;
+            
+            }
+
+            fieldset{
+                width: 90px;
+                height: 300px;
+                margin: 50px auto;
+                color: white;
+                background-color: white;
+             }
+
+            .contact-form{
+                text-align: left;
+                color: black;
+                margin: 10px;
+                gap: 20px;
+            }
+            .contact-form {
+
+
+            }
+            #x{
+                    color: #777;
+            }
+            .fotter{
+                display: flex;
+                height: 80vh;
+                color: white;
+                background-color: black;
+            }
+            .end_credit{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                
+             
+            }
+            .end_credit H3{
+                margin-top:10%;
+                margin-left: 20%;
+                margin-bottom: 5%;
+                font-weight: 700;
+
+            }
+            .end_credit P{
+                font-weight: 300;
+                font-size: small;
+                margin-top: 0%;
+                padding: 0%;
+                margin-left: 20%;
+            }
+            .social{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                color: white;
+            }
+            .social-tag{
+                margin-top:8%;
+                margin-right: 10%;
+                margin-bottom:0
+                
+               
+            }
+            .social-icons a{
+               margin-right: 20px;
+            }
+            .line{
+                color: red;
+            }
+            
+
+
+           
+            
+        </style>
+
+    </head>
+    <body>
+        <header class="header">
+                    <div class="profile" >
+                        <img class="img1" src="WhatsApp Image 2024-05-08 at 16.20.34_4d854a70.jpg" alt="">
+                        <p class="name"><b>Pavan Kumar</b></p>
+                    </div>
+                    <div class="main">
+                        <a href="#"><B>HOME</B></a>
+                        <a href="#"><b>ABOUT</b></a>
+                        <a href="#"><b>PROJECTS</b></a>
+                        <a href="#"><b>CONTACT</b></a>
+                    </div>
+        </header>
+                <div class="h2">
+                    <div class="logo">
+                        <a href="https://www.linkedin.com/in/pavan-kumar-lingannapeta-aab851260/" class="fa fa-linkedin is"></a>
+                        <a href="https://github.com/pavankumar0205" class="fa fa-github is"> </a>
+                        <a href="https://x.com/pavanaaryan2" class="fa fa-twitter is"></a>
+                        <a href="#" class="fa fa-youtube-play is"></a>
+                        <a href="https://www.instagram.com/oka_cinima_pichhodu/" class="fa fa-instagram"></a>
+                     </div>
+
+                     <div class="main_text"> <h1><b>HEY, MY NAME IS PAVAN KUMAR</b></h1> 
+                                <p>Aspiring Full-Stack Developer passionate about building scalable web applications and solving complex problems. Proficient in front-end and back-end technologies, I enjoy creating seamless user experiences and optimizing performance. Always eager to learn and contribute to impactful projects in a dynamic environment.</p>
+                                <a href="#" > <button>PROJECT</button> </a></div>
+                    </div>
+                
+                
+                <div class="about">
+                    <div class="about_me"><h2>ABOUT ME</h2>
+                    <div class="blue-line">  </div>
+                    <div class="des">I’m a passionate Java Full Stack Developer.I love building scalable web     applications and crafting seamless user experiences.I’m always eager to learn new technologies and improve my skills.I thrive on challenges that push me to grow.</div>
+                </div>
+            
+                     <div class="info">
+                        <div class="knowme">
+                            <h3> <b>Get To Know Me.!</b></h3>
+                            <p> Hey.! It's <strong>Pavan Kumar</strong> I’m a student who recently started exploring <b>Full Stack Development </b>With a passion for learning and problem-solving, I’m building my skills to develop both front-end and back-end solutions. My goal is to combine creative thinking with technical expertise to craft responsive, scalable web applications.As I continue my journey, I’m eager to expand my knowledge, take on new challenges, and contribute to meaningful projects that make an impact.</p>
+                            <div class="contact"> <i href="#"> CONTACT</i>
+                        </div>
+                    </div>
+                    <div class="skills">
+                            <h3> My Skllis</h3>
+                        <div class="skill_set">HTML</div>
+                        <div class="skill_set">CSS</div>
+                        <div class="skill_set">JavaScript</div>
+                        <div class="skill_set">Java</div>
+                        <div class="skill_set">C</div>
+                        <div class="skill_set">Git</div>
+                        <div class="skill_set">Xamp</div>
+                    
+                     </div>
+                    </div>
+                </div>
+                <div class="projects">
+                        <h3>PROJECTS</h3>   
+                        <div class="blue-line">  </div>
+                        <p> Below are some of the projects I have worked on, showcasing my skills. These projects demonstrate my ability to develop full-stack applications, implement best practices, and create user-friendly experiences. Each project highlights my approach to problem-solving, design, and backend development.
+                        </p>     
+                        <div class="project-1"> 
+                            <div class="image_1"><img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg"></div>
+                            <div class="para_1"> 
+                                <h3>Project-1</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, provident.</p>
+                                <a href="#"> CASE STUDY </a>
+                            </div>
+                        </div>
+                        <div class="project-2">
+                            <div class="image_2"><img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg"></div>
+                            <div class="para_2"> 
+                                <h3>Project-1</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, provident.</p>
+                                <a href="#"> CASE STUDY </a>
+                            </div>
+                        </div>
+                        
+                </div>
+                <div class="project-3">
+                            <div class="image_3"><img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg"></div>
+                            <div class="para_3"> 
+                                <h3>Project-1</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, provident.</p>
+                                <a href="#"> CASE STUDY </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="con">
+                    <div class="con-h"><h3><b>CONTACT</b></h3>
+                    <div class="white-line">  </div>
+                    <p> I’m always eager to collaborate on exciting projects, learn new technologies, and connect with like-minded developers. Whether you have a project idea, a job opportunity, or just want to chat about tech, feel free to reach out.
+                    </p>   
+                    
+                    <fieldset>
+                    <form class="contact-form">
+                        <table id="x">
+                            <tr >
+                                <td >Name</td> 
+                            </tr>
+                            <tr> 
+                            <td> <input type="text" name="fname" placeholder="Enter Your Name">   </td>
+                            </tr>
+                            <tr>
+                                <td>email</td> 
+                            </tr>
+                            <tr>   <td> <input type="email" name="femail" placeholder="Enter Your Email"> </td>
+                            </tr>
+                            <tr>
+                                <td >Message</td>
+                             </tr>
+                            <tr>    <td> <textarea id="Message" name="Message" rows="10" cols="50" placeholder="Enter Your Message"></textarea> </td>
+                            </tr>
+                        </table>
+                         
+                    </form>
+                    </fieldset>
+                </div>
+                </div>
+                    
+                
+                <footer class="fotter">
+                        <div class="end_credit">
+                            <h3>Pavan Kumar</h3>
+                            <p>Have a question, a project idea, or just want to connect? Feel free to reach out! I’m always open to discussing new opportunities, collaborations</p>
+                        </div>
+                        
+                        <div class="social">
+                            <div class="social-tag"> <h3>SOCIAL</h3></div>
+        
+                                <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/pavan-kumar-lingannapeta-aab851260/" class="fa fa-linkedin is"></a>
+                                <a href="https://github.com/pavankumar0205" class="fa fa-github is"> </a>
+                                <a href="https://x.com/pavanaaryan2" class="fa fa-twitter is"></a>
+                                <a href="#" class="fa fa-youtube-play is"></a>
+                                <a href="https://www.instagram.com/oka_cinima_pichhodu/" class="fa fa-instagram"></a>
+                        </div>
+                        </div>
+                    <div class="line"> </div>
+                    </footer>
+
+    </body>
+
+  
+</html>
